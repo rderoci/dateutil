@@ -1,6 +1,7 @@
 package dateutil
 
 import (
+	"fmt"
 	"time"
 )
 
@@ -40,6 +41,8 @@ func (self *TimeDif) adjust(daysInMonth int) {
 
 func Difference(from, to time.Time) TimeDif {
 	//
+	fmt.Println("Branch Principal")
+	
 	diff := diffBetweenToYearRound(from, to)
 
 	diffEnd := diffBetweenFromYearRound(to)
